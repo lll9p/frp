@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
-echo "TEST"
-echo `/usr/bin/frps -v`
+echo "frp version is: `/usr/bin/frps -v`"
 
 set -ex
 
