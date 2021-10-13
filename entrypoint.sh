@@ -1,11 +1,12 @@
 #!/usr/bin/env sh
 
+echo "TEST"
+echo `/usr/bin/frps -v`
+
 set -ex
 
 # 支持 host.docker.internal
 echo -e "`/sbin/ip route | awk '/default/ { print $3 }'`\thost.docker.internal" | tee -a /etc/hosts > /dev/null
-
-/usr/bin/frps -v
 
 case "$1" in
   frps)
