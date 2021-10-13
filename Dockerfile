@@ -23,7 +23,8 @@ RUN set -eux; \
     cp frps.ini /etc/frp ; \
     cd - ; \
     rm frp_${FRP_VERSION}_linux_${binArch}.tar.gz ; \
-    rm -rf frp_${FRP_VERSION}_linux_${binArch}/
+    rm -rf frp_${FRP_VERSION}_linux_${binArch}/ ; \
+    frps -v
 
 RUN chmod +x /entrypoint.sh
 
