@@ -14,12 +14,13 @@ RUN set -eux; \
 	*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;;\
     esac; \
     wget --no-check-certificate -c https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_${binArch}.tar.gz \
+    && pushd \
     &&  tar zxvf frp_${FRP_VERSION}_linux_${binArch}.tar.gz  \
     &&  cd frp_${FRP_VERSION}_linux_${binArch}/ \
     &&  cp frps /usr/bin/ \
     &&  mkdir -p /etc/frp \
     &&  cp frps.ini /etc/frp \
-    &&  cd .. \
+    &&  popd \
     &&  rm frp_${FRP_VERSION}_linux_${binArch}.tar.gz \
     &&  rm -rf frp_${FRP_VERSION}_linux_${binArch}/
 
