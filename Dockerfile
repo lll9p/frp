@@ -26,6 +26,7 @@ RUN set -eux; \
     rm -rf frp_${FRP_VERSION}_linux_${binArch}/ ; \
     frps -v
 
-RUN chmod +x /entrypoint.sh
+#RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT /usr/bin/frps -c /etc/frp/frps.ini
