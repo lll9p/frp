@@ -19,6 +19,7 @@ RUN set -eux; \
     tar zxvf frp_${FRP_VERSION}_linux_${binArch}.tar.gz; \
     cd frp_${FRP_VERSION}_linux_${binArch}/ ; \
     cp frps /usr/bin/ ; \
+    cp frpc /usr/bin/ ; \
     mkdir -p /etc/frp ; \
     cp frps.ini /etc/frp ; \
     cd - ; \
