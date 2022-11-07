@@ -2,7 +2,7 @@ FROM alpine:latest
 
 LABEL maintainer="lll9p <lll9p.china@gmail.com>"
 
-ENV FRP_VERSION 0.37.1
+ENV FRP_VERSION 0.45.0
 
 COPY ./entrypoint.sh /entrypoint.sh
 
