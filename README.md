@@ -1,3 +1,3 @@
-# docker-caddy
+# docker-frp
 
-With webdav dnspod cloudflare plugins.
+Current version: 0.45.0
