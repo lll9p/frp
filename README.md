@@ -1,3 +1,3 @@
 # docker-frp
 
-Current version: 0.45.0
+Current version: v0.51.3
